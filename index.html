@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		
+		body {
+			font-family: monospace;
+			background: #000;
+			color: #fff;
+			padding: 2rem;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		h1 {
+			font-size: 4rem;
+			margin-bottom: 2rem;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+		
+		h1:hover {
+			color: #ff0080;
+			text-shadow: 0 0 20px #ff0080;
+		}
+		
+		.project {
+			margin: 1rem 0;
+			padding: 1rem;
+			border: 1px solid #333;
+			transition: all 0.3s;
+		}
+		
+		.project:hover {
+			border-color: #00ff80;
+			background: rgba(0,255,128,0.1);
+		}
+		
+		.contact {
+			margin-top: 3rem;
+			font-size: 1.2rem;
+		}
+		
+		a {
+			color: #00ff80;
+			text-decoration: none;
+			margin-right: 2rem;
+		}
+		
+		a:hover {
+			text-shadow: 0 0 10px #00ff80;
+		}
+	</style>
+</head>
+<body>
+	<h1>M. Ichsan Natawijaya</h1>
+	
+	<p>Building digital experiences.</p>
+	
+	<div class="project">
+		<h3>Project Alpha (a)</h3>
+		<p>Web application with modern stack</p>
+	</div>
+	
+	<div class="project">
+		<h3>Project Beta (b)</h3>
+		<p>Mobile-first responsive design</p>
+	</div>
+	
+	<div class="project">
+		<h3>Project Gamma (g)</h3>
+		<p>API development and integration</p>
+	</div>
+	
+	<div class="contact">
+		<a href="mailto:hey@icanq.dev" target="_blank">Email</a>
+		<a href="https://github.com/icanq" target="_blank">GitHub</a>
+		<a href="https://linkedin.com/in/natawijayaichsan" target="_blank">LinkedIn</a>
+	</div>
+
+	<script>
+		document.querySelectorAll('.project').forEach(p => {
+			p.addEventListener('click', () => {
+				p.style.transform = p.style.transform ? '' : 'scale(1.05)';
+			});
+		});
+	</script>
+</body>
+</html>
